@@ -10,7 +10,7 @@ const app = express();
 
 const DbKey = 'KPjD8dobbo5O6tuy'
 
-mongoose.connect('mongodb+srv://Fernando:KPjD8dobbo5O6tuy@cluster0.9b4na.mongodb.net/node-angular?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('${{ secrets.mongoDB_secret }}', { useNewUrlParser: true, useUnifiedTopology: true })
 .then(()=>{
   console.log('Connected to database!');
 }).catch(()=>{
